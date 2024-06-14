@@ -79,7 +79,10 @@ const SignUp = () => {
       password: password,
       nickname: nickname,
     });
-    console.log(response);
+    if (response) {
+      confirm("회원가입이 완료 되었습니다.");
+      navigate("/sign_in");
+    }
   };
   return (
     <Container>
